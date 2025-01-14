@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renovo Barber - Agendamento</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="WhatsApp Image 2025-01-13 at 20.36.06.jpeg" alt="Logo Renovo Barber" class="logo-img">
+            <h1>Renovo Barber</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#services">Nossos Serviços</a></li>
+            <li><a href="#form-section">Agende Agora</a></li>
+            <li>
+                <a href="https://wa.me/5531990723954" target="_blank">Contato</a>
+            </li>
+        </ul>
+    </header>
+
+    <section class="hero">
+        <h2>Bem-vindo à Renovo Barber</h2>
+        <p>Agende seu horário com facilidade e conforto</p>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Nossos Serviços</h2>
+        <div class="carousel">
+            <div class="carousel-item">
+                <h3>Corte</h3>
+                <p>R$ 30,00</p>
+            </div>
+            <div class="carousel-item">
+                <h3>Barba</h3>
+                <p>R$ 20,00</p>
+            </div>
+            <div class="carousel-item">
+                <h3>Hidratação</h3>
+                <p>R$ 30,00</p>
+            </div>
+            <div class="carousel-item">
+                <h3>Escovinha</h3>
+                <p>R$ 20,00</p>
+            </div>
+            <div class="carousel-item">
+                <h3>Pezinho</h3>
+                <p>R$ 7,00</p>
+            </div>
+            <div class="carousel-item">
+                <h3>Desenho</h3>
+                <p>R$ 10,00</p>
+            </div>
+            <div class="carousel-item">
+                <h3>Sobrancelha</h3>
+                <p>R$ 7,00</p>
+            </div>
+            <div class="carousel-item">
+                <h3>Pigmentação</h3>
+                <p>R$ 30,00</p>
+            </div>
+            <div class="carousel-item">
+                <h3>Textura</h3>
+                <p>R$ 30,00</p>
+            </div>
+            <div class="carousel-item">
+                <h3>Luzes</h3>
+                <p>R$ 50,00</p>
+            </div>
+            <div class="carousel-item">
+                <h3>Progressiva</h3>
+                <p>R$ 100,00</p>
+            </div>
+            <div class="carousel-item">
+                <h3>Nevou</h3>
+                <p>R$ 150,00</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="form-section" class="form-section">
+        <h2>Agende seu horário</h2>
+        <form id="appointmentForm">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" placeholder="Seu nome" required>
+
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Seu telefone" required>
+
+            <label for="date">Data:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Horário:</label>
+            <select id="time" name="time" required></select>
+
+            <fieldset>
+                <legend>Escolha seus serviços:</legend>
+                <div class="services-container">
+                    <div class="service-item">
+                        <input type="checkbox" class="service" value="30" data-name="Corte">
+                        <label>Corte</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" class="service" value="20" data-name="Barba">
+                        <label>Barba</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" class="service" value="30" data-name="Hidratação">
+                        <label>Hidratação</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" class="service" value="20" data-name="Escovinha">
+                        <label>Escovinha</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" class="service" value="7" data-name="Pezinho">
+                        <label>Pezinho</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" class="service" value="10" data-name="Desenho">
+                        <label>Desenho</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" class="service" value="7" data-name="Sobrancelha">
+                        <label>Sobrancelha</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" class="service" value="30" data-name="Pigmentação">
+                        <label>Pigmentação</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" class="service" value="30" data-name="Textura">
+                        <label>Textura</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" class="service" value="50" data-name="Luzes">
+                        <label>Luzes</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" class="service" value="100" data-name="Progressiva">
+                        <label>Progressiva</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" class="service" value="150" data-name="Nevou">
+                        <label>Nevou</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <p id="total">Total: R$ 0,00</p>
+
+            <button type="button" id="confirmAppointment">Agendar Pagamento</button>
+        </form>
+    </section>
+
+    <section id="pixSection" class="hidden">
+        <h2>Pagamento via PIX</h2>
+        <textarea id="pixCode" readonly>00020126580014BR.GOV.BCB.PIX01365c6de5f3-72af-4c31-bae1-da6c35db75cd5204000053039865802BR5922Elder Luis Vieira Rosa6009SAO PAULO62140510hhozthu2PF63047497</textarea>
+        <button id="copyPix">Copiar PIX</button>
+        <button id="finalizeAppointment">Confirmar Agendamento</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Renovo Barber. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
